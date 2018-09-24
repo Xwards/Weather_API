@@ -1,5 +1,6 @@
 const request = require('request');
 const express = require('express');
+const mongoose = require('mongoose');
 
 var app =  express();
 
@@ -8,9 +9,6 @@ app.get('/',function (req,res) {
         if(error){
            return  console.log(error);
         }
-
-        // res.send(body.coord);
-        // return console.log(body);
 
         var data = body;
         obj = JSON.parse(data);
